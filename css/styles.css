@@ -1,0 +1,297 @@
+/* --- Variables & Reset --- */
+:root {
+    --citizens-green: #00945f;
+    --citizens-orange: #f37021;
+    --text-gray: #58595b;
+    --light-gray-bg: #f1f1f1;
+    --border-color: #c0c0c0;
+    --text-grey: #909090;
+    --light-green-bg: #ebf7f5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header: full-width header with inner centered container */
+.header {
+    width: 100%;
+}
+.header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* left-aligned by default */
+    gap: 16px;
+    padding: 8px 0;
+} 
+
+.text-center { text-align: center; }
+.section-padding { padding: 60px 0; }
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--citizens-green);
+    font-weight: normal;
+}
+
+.accent-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Green underline decoration */
+.accent-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--citizens-green);
+}
+
+/* --- Components --- */
+.logo { height: 36px; margin: 20px 0; padding-left: 20px; }
+
+/* Hero: container and image (crop/zoom on small screens) */
+.hero {
+    position: relative;
+    overflow: hidden; /* hide overflow when image is scaled */
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease; /* smooth zoom */
+    transform-origin: center;
+    will-change: transform;
+}
+
+
+.lead-text {
+    text-align: left;
+    margin: 0 20px 30px;
+    font-size: 17px;
+    color: var(--text-grey);
+}
+
+.btn-orange {
+    background-color: var(--citizens-orange);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* --- Features Grid --- */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.grid-item {
+    flex: 1 1 50%;
+    padding: 40px;
+}
+
+.grid-item h3 { margin-bottom: 15px; font-size: 20px; }
+.grid-item p {color: var(--text-grey); }
+.link-green { color: var(--citizens-green); text-decoration: none; font-weight: bold; font-size: 14px; }
+
+.border-right { border-right: 1px solid var(--border-color); }
+.border-bottom { border-bottom: 1px solid var(--border-color); }
+.marginTop { margin-top: 48px; }
+
+/* --- Banner --- */
+.location-banner { margin: 40px 0; padding: 40px; }
+
+.banner-header {
+    background-color: var(--citizens-green);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.banner-body {
+    background-color: var(--light-green-bg);
+    padding: 30px;
+    font-size: 14px;
+    text-align: left;
+    color: var(--text-grey);
+}
+
+/* --- Testimonials --- */
+.testimonials {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+       flex: 1;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: anchor-center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+.quote1 {
+    font-style: italic;
+   font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    color: rgb(102, 102, 102);
+     width: 174.865px;
+  height: 172.727px;
+  text-align: center;
+   
+}
+.quote2 {
+    font-style: italic;
+   font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    color: rgb(102, 102, 102);
+      width: 380.543px;
+  height: 203.727px;
+  text-align: center;
+   
+}
+
+.quote3 {
+    font-style: italic;
+   font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    color: rgb(102, 102, 102);
+     width: 180.545px;
+  height: 168.875px;
+  text-align: center;
+   
+}
+
+
+
+._quotebg1 {
+    position: absolute;
+    left: 142px;
+    top: 135px;
+    font-size: 12rem;
+    font-family: "CitiSansBookItalic", serif;
+    color: rgba(102, 102, 102, 0.11);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+._quotebg2 {
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-size: 12rem;
+    font-family: "CitiSansBookItalic", serif;
+    color: rgba(102, 102, 102, 0.11);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+
+cite {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--citizens-green);
+    font-size: 13px;
+    max-width: 150px;
+}
+
+/* --- Footer --- */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 20px;
+    font-size: 11px;
+    color: #999;
+}
+
+.footer a { color: #666; }
+.footer-bottom-links { margin-top: 20px; font-weight: bold; }
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  /* Mobile-specific styles here */
+  .container {
+    padding: 0 15px;
+  }
+  /* center header content on small screens */
+  .header .header-inner {
+    justify-content: center;
+  }
+  /* reduce logo margin on mobile */
+  .logo {
+    margin: 12px 0;
+  }
+}
+
+/* Styles for screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet-specific styles here */
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+    .testimonials { flex-direction: column; gap: 20px; }
+    .quote { padding-left: 2.4rem; font-size: 15px; }
+    ._quotebg { left: 16px; top: 14px; font-size: 2.8rem; }
+     .hero {
+        height: 50vh; /* adjust to taste (40vh-60vh are common) */
+    }
+    .hero-image {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.12); /* slight zoom to crop edges */
+    }
+}
+
+/* Small-screen crop/zoom: make the hero a fixed viewport height and cover the area */
+@media (max-width: 767px) {
+   .accent-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+}
+
+
+
